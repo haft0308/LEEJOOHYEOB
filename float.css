@@ -1,0 +1,30 @@
+*{
+	margin:0;
+	padding:0;
+}
+#wrap{
+	width:600px;
+	margin:30px auto;
+	background-color:gray;
+}
+#header{/*클리어 픽스, width주지 않는다.*/
+	height:150px;
+	background-color:red;
+}
+#main{
+	height:300px;
+	width:400px;
+	float:right;
+	background-color:green;
+}
+#side{
+	height:150px;
+	background-color:blue;
+	width:150px;
+	float:left;
+}
+#footer{/*클리어 픽스, width주지 않는다.*/
+	height:100px;
+	background-color:purple;
+	clear:both;
+}

@@ -1,0 +1,28 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul, li{/*,로 구별하면 개별적으로 해당 css를 적용한다.*/
+	list-style:none;
+}
+#wrap{/*높이 값을 주지 않는 이유는 안에있는 내용이 가변적으로 할 수 있게*/
+	width:600px;
+	margin:30px auto;
+	background-color:white;
+}
+#header{
+	height:150px;
+	background-color:red;
+}
+.box li{
+	width:150px;
+	height:150px;
+	background-color:gray;
+	margin:0px 20px 20px 20px;
+	float:left;
+}
+#footer{
+	height:100px;
+	background-color:purple;
+	clear:both;
+}

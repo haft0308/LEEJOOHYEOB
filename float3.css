@@ -1,0 +1,42 @@
+*{
+	margin:0;
+	padding:0;
+}
+#wrap{
+	width:600px;
+	margin:30px auto;
+	background-color:gray;
+}
+#header{
+	height:150px;
+	background-color:red;
+}
+#content{
+	width:400px;
+	/*height:200px;*/
+	background-color:black;
+	float:left;
+}
+#main{
+	width:200px;
+	background-color:yellow;
+	height:300px;
+	float:right;
+}
+#side1{
+	width:100px;
+	background-color:green;
+	height:100px;
+	float:left;
+}
+#side2{
+	width:150px;
+	background-color:blue;
+	height:100px;
+	float:right;
+}
+#footer{
+	height:100px;
+	background-color:purple;
+	clear:both;
+}

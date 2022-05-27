@@ -1,0 +1,129 @@
+#wrap{
+	/*div와 같은 블락태의 경우는 중앙정렬시에 너비를 주고 margin 0 auto로 정렬한다. */
+	/*넓이를 설정하지 않으면 화면에 꽉 찬다.
+	*/
+	width:600px;
+	margin:0 auto;
+	background-color:lightgray;
+}
+#left{
+	float:left;/*float 띄우다. 단순히 좌우로 나열하는 기능이 아닌, 물건을 부유 시키는 기능*/
+	background-color:orange;
+	
+}
+#right{
+	float:right;
+	background-color:orange;
+}
+/*클리어픽스(ClearFix> : 내용이 없는 block태그를 만들어서 float으로부터 height 값이 소실되는 문제를 방지하는 기법*/
+#wrap:after{
+	content:"";/*뒷 배경을 유지할 수 있다. 클리어 픽스 무조건 해줘야 한다. after는 가상의 존재가 있다고 봄.*/
+	display:block;
+	clear:both;
+}
+ol{
+	list-style-position:inside;
+	border:1px solid red;
+	background-color:gray;
+	width:75px;
+	padding:0;
+	margin:0;/*padding, margin 초기화 필요*/
+}
+ol li{
+	width:45px;
+	padding:5px;
+	margin:5px;
+	height:20px;
+	text-align:center;
+	border:1px solid gray;
+	background-color:white;
+}/*'>'자식 태그에게만 해당*/
+
+ul{
+	width:240px;
+	list-style:none;
+	border:1px solid gray;
+	padding:0;
+	margin:0 auto;
+}
+ul li{
+	/*float:left;*/
+	display:inline-block;
+	text-align:center;
+	padding:5px;
+	height:20px;
+	width:48px;
+	border:1px solid gray;/*보더 지울 때 위에 width 50으로 고치기(한달 뒤에 볼 자신을 위해서)*/
+}
+ul:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+ul li:hover{
+	background-color:green;
+	color:white;
+}
+ul li:active{
+	background-color:red;
+	color:white;
+}
+div{
+	padding:10px;
+	margin:10px;
+	border:1px solid gray;
+	background-color:white;
+}
+p{
+	background-color:lightcyan;
+	border:1px solid gray;
+}
+h1{
+	background-color:lightcoral;
+	border:1px solid gray;
+}
+h2{
+	background-color:lightgreen;
+	border:1px solid gray;
+}
+span{
+	border:1px solid red;
+}
+table{
+	width:400px;
+	margin:0 auto;
+	background-color:lightsalmon;
+	border:1px solid gray;
+}
+td{
+	text-align:center;
+	background-color:lightskyblue;
+}
+/*==============================================*/
+/*=============여기서부터 선택자 내용입니다.===========*/
+/*==============================================*/
+h2 span{
+	background-color:purple;
+}
+/*부모>자식 : 딱 해당 부모의 자식만을 선택*/
+fieldset > p{
+	background-color:purple;
+}
+
+/*기준 + 형제 : 형제들 중 첫째를 선택*/
+h1 + p{
+	background-color:purple;
+}
+/*기준~형제 : 형제들 전부를 선택*/
+h1 ~ p{
+	background-color:purple;
+}
+/*가상 클래스*/
+/*only-child:해당 자식이 하나만 있는 경우*/
+p:only-child{
+	background-color:green;
+}
+/*only-of-type : 해당 종류의 태그가 하나만 있는 경우*/
+/*p:only-of-type{
+	background-color:green;
+}*/
