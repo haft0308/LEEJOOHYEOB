@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.BufferedWriter;
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
 
 public class MovieMain {
 
@@ -24,7 +26,7 @@ public class MovieMain {
 		*/
 		
 		Manager admin = new Manager();
-		admin.setMovie();
+		admin.getMovie();
 		
 
 	}
@@ -37,7 +39,7 @@ class Manager{
 		
 	}
 	
-	void setMovie() throws IOException{
+	public void setMovie() throws IOException{
 		
 		FileWriter movie = new FileWriter("src/project/movie.txt");
 		BufferedWriter bw = new BufferedWriter(movie);
@@ -49,12 +51,14 @@ class Manager{
 		
 		int i=5;
 		while (i>0){
-			System.out.println("영화 제목, 장르, 연령대를 "+i+"번 작성해주세요. 작성은 '1' 종료는 '0'");
+			System.out.println("영화 제목, 장르, 연령대를 5번 작성해주세요. 현재 "+i+"번 남았습니다. 작성은 '1' 종료는 '0'");
 			
 			Scanner sc = new Scanner(System.in);
 			int tmp=sc.nextInt();
 			if(tmp==1)
 			{
+				
+				
 				Scanner moviesc = new Scanner(System.in);
 				
 				System.out.print("영화를 등록합니다.");
@@ -69,7 +73,7 @@ class Manager{
 				System.out.println("========================================");
 				
 				
-				bw.write(title+", "+janre+", "+age);
+				bw.write(System.currentTimeMillis()+", "+title+", "+janre+", "+age);
 				bw.newLine();
 			}
 			else if(tmp==0)
@@ -85,9 +89,14 @@ class Manager{
 
 	}
 	
-	void getMovie()
+	void getMovie() throws IOException
 	{
-		
+		setMovie();
+//		FileReader movies=new FileReader("src/project/movie.txt");
+//		BufferedReader br=new BufferedReader(movies);
+//		
+//		br.close();
+//		movies.close();
 	}
 	
 }
